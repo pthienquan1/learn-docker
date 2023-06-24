@@ -38,3 +38,6 @@ Volumes provide the ability to connect specific filesystem paths of the containe
 3. Start the todo app container, but add the --mount option to specify a volume mount. Give the volume a name, and mount it to /etc/todos in the container, which captures all files created at the path. In your Mac or Linux terminal, or in Windows Command Prompt or PowerShell, run the following command:
     - $ docker run -dp 3000:3000 --mount type=volume,src=todo-db,target=/etc/todos getting-started
 
+# Use bind mounts
+### Trying out bind mounts
+$ docker run -it --mount "type=bind,src=$pwd,target=/src" ubuntu bash
